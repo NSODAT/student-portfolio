@@ -189,11 +189,6 @@ function renderThesis() {
 
     container.innerHTML = `
         <div class="thesis-card" data-aos="fade-up">
-            <div class="thesis-preview">
-                <img src="${thesisData.previewImage || 'https://via.placeholder.com/400x300?text=Thesis'}" 
-                     alt="Дипломная работа" 
-                     onerror="this.src='https://via.placeholder.com/400x300?text=Thesis'">
-            </div>
             <div class="thesis-info">
                 <h3>${thesisData.title}</h3>
                 <p class="thesis-topic">
