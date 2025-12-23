@@ -193,18 +193,54 @@ class PortfolioManager:
     def deploy_to_github(self, commit_message: str = "Update portfolio content") -> bool:
         try:
             os.chdir(self.repo_path)
+            
+            # Проверяем, инициализирован ли git
+            if not os.path.exists('.git'):
+                self.log("Git репозиторий не инициализирован. Инициализируем...", "WARNING")
+                subprocess.run(["git", "init"], capture_output=True)
+                
+                # Добавляем remote origin
+                remote_url = "https://github.com/NSODAT/student-portfolio.git"
+                subprocess.run(["git", "remote", "add", "origin", remote_url], capture_output=True)
+                
+                # Создаем ветку main
+                subprocess.run(["git", "branch", "-M", "main"], capture_output=True)
+            
+            # Проверяем наличие remote origin
+            result = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True)
+            if result.returncode != 0:
+                self.log("Remote origin не настроен. Добавляем...", "WARNING")
+                remote_url = "https://github.com/NSODAT/student-portfolio.git"
+                subprocess.run(["git", "remote", "add", "origin", remote_url], capture_output=True)
+            
+            # Выполняем команды git
             commands = [
                 ["git", "add", "."],
                 ["git", "commit", "-m", commit_message],
-                ["git", "push", "origin", "main"]
+                ["git", "push", "-u", "origin", "main"]  # Добавлен флаг -u для первого push
             ]
+            
             for cmd in commands:
+                self.log(f"Выполняем: {' '.join(cmd)}", "INFO")
                 result = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8')
+                
                 if result.returncode != 0:
-                    self.log(f"Ошибка выполнения {cmd[0]}: {result.stderr}", "ERROR")
-                    return False
+                    # Если это ошибка "nothing to commit", это не критично
+                    if "nothing to commit" in result.stdout or "nothing to commit" in result.stderr:
+                        self.log("Нет изменений для коммита", "WARNING")
+                        continue
+                    # Если ошибка с веткой, пробуем создать и push
+                    elif "error: src refspec main does not match any" in result.stderr:
+                        self.log("Создаем ветку main...", "WARNING")
+                        subprocess.run(["git", "checkout", "-b", "main"], capture_output=True)
+                        continue
+                    else:
+                        self.log(f"Ошибка выполнения {cmd[0]}: {result.stderr}", "ERROR")
+                        return False
+                        
             self.log("Изменения успешно загружены в GitHub!", "SUCCESS")
             return True
+        
         except Exception as e:
             self.log(f"Ошибка деплоя: {e}", "ERROR")
             return False
