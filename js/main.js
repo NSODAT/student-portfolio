@@ -111,35 +111,53 @@ document.addEventListener('DOMContentLoaded', async function () {
 // ==================== Load Data ====================
 async function loadAllData() {
     try {
+        console.log('🚀 Начинаем загрузку данных...');
+
         // Load education modules
         const modulesResponse = await fetch('public/data/education_modules.json');
+        console.log('📚 Модули - статус:', modulesResponse.status, modulesResponse.ok);
+
         if (modulesResponse.ok) {
             educationModules = await modulesResponse.json();
+            console.log('📚 Модули загружены:', educationModules);
             renderEducationModules();
+        } else {
+            console.error('❌ Ошибка загрузки модулей:', modulesResponse.status);
         }
 
         // Load thesis
         const thesisResponse = await fetch('public/data/thesis.json');
+        console.log('🎓 Диплом - статус:', thesisResponse.status);
+
         if (thesisResponse.ok) {
             thesisData = await thesisResponse.json();
+            console.log('🎓 Диплом загружен:', thesisData);
             renderThesis();
         }
 
         // Load courseworks
         const courseworksResponse = await fetch('public/data/courseworks.json');
+        console.log('📝 Курсовые - статус:', courseworksResponse.status);
+
         if (courseworksResponse.ok) {
             courseworks = await courseworksResponse.json();
+            console.log('📝 Курсовые загружены:', courseworks);
             renderCourseworks();
         }
 
         // Load practical works
         const practicalResponse = await fetch('public/data/practical_works.json');
+        console.log('💻 Практики - статус:', practicalResponse.status);
+
         if (practicalResponse.ok) {
             practicalWorks = await practicalResponse.json();
+            console.log('💻 Практики загружены:', practicalWorks);
             renderPracticalWorks();
         }
+
+        console.log('✅ Загрузка завершена!');
     } catch (error) {
-        console.error('Error loading data:', error);
+        console.error('💥 Критическая ошибка:', error);
     }
 }
 
