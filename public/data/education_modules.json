@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "title": "Программирование",
+    "semesters": [
+      {
+        "id": 1,
+        "title": "7 Семестр",
+        "labs": [
+          {
+            "id": 1,
+            "title": "ЛР1",
+            "link": "https://github.com/NSODAT/PROG7_LR4_"
+          }
+        ]
+      }
+    ],
+    "id": 1
+  }
+]
