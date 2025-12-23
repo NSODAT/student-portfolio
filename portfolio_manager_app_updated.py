@@ -210,7 +210,7 @@ class PortfolioManager:
             result = subprocess.run(["git", "remote", "get-url", "origin"], capture_output=True, text=True)
             if result.returncode != 0:
                 self.log("Remote origin не настроен. Добавляем...", "WARNING")
-                remote_url = "https://github.com/NSODAT/student-portfolio.git"
+                remote_url = "https://github.com/NSODAT/developer-portfolio.git"
                 subprocess.run(["git", "remote", "add", "origin", remote_url], capture_output=True)
             
             # Выполняем команды git
