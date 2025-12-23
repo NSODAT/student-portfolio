@@ -1234,7 +1234,7 @@ class PortfolioApp(QMainWindow):
         return w
 
     def openSite(self):
-        webbrowser.open("https://NSODAT.github.io/student-portfolio")
+        webbrowser.open("https://NSODAT.github.io/developer-portfolio")
 
     # Education Modules Methods
     def refresh_education_modules(self):
