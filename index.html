@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Шульга Евгений | 09.03.01</title>
+
+    <!-- Meta теги -->
+    <meta name="description" content="Портфолио студента направления 09.03.01 Информатика и вычислительная техника">
+    <meta name="author" content="Шульга Евгений">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="nav-brand">
+                    <a href="#home" class="brand-link">
+                        <span class="brand-icon">🎓</span>
+                        <span class="brand-text">Портфолио</span>
+                    </a>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Главная</a></li>
+                    <li><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="#education" class="nav-link">Учебные модули</a></li>
+                    <li><a href="#thesis" class="nav-link">Дипломная работа</a></li>
+                    <li><a href="#courseworks" class="nav-link">Курсовые</a></li>
+                    <li><a href="#practicals" class="nav-link">Практические</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles-js"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        Привет, я <span class="gradient-text">Евгений Шульга</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Студент направления 09.03.01<br>
+                        Информатика и вычислительная техника
+                    </p>
+                    <p class="hero-description">
+                        Разрабатываю современные веб-приложения и изучаю передовые технологии программирования
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary">
+                            <i class="fas fa-user"></i> Обо мне
+                        </a>
+                        <a href="#education" class="btn btn-outline">
+                            <i class="fas fa-graduation-cap"></i> Мои работы
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="4">0</span>
+                            <span class="stat-label">Года обучения</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>+
+                            <span class="stat-label">Проектов</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="10">0</span>+
+                            <span class="stat-label">Технологий</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-up" data-aos-delay="200">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-bg"></div>
+                        <img src="assets/images/profile.jpg" alt="Евгений Шульга"
+                            onerror="this.src='https://via.placeholder.com/400x400?text=Photo'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Прокрутите вниз</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Обо мне</h2>
+                <p class="section-subtitle">Немного информации о моем образовании и навыках</p>
+            </div>
+            <div class="about-content">
+                <div class="about-info" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Образование</h3>
+                        <p><strong>09.03.01</strong> - Информатика и вычислительная техника</p>
+                        <p>Бакалавриат, 4 курс</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Специализация</h3>
+                        <p>Разработка программного обеспечения</p>
+                        <p>Web-разработка, Базы данных</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Достижения</h3>
+                        <p>Участие в хакатонах</p>
+                        <p>Проектная деятельность</p>
+                    </div>
+                </div>
+
+                <div class="skills-section" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="skills-title">Технологический стек</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Modules Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Учебные модули</h2>
+                <p class="section-subtitle">Лабораторные работы по семестрам</p>
+            </div>
+            <div id="educationModules" class="modules-container">
+                <!-- Динамически загружается из JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Thesis Section -->
+    <section id="thesis" class="thesis section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Дипломная работа</h2>
+                <p class="section-subtitle">Выпускная квалификационная работа</p>
+            </div>
+            <div id="thesisContent" class="thesis-container">
+                <!-- Динамически загружается из JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Courseworks Section -->
+    <section id="courseworks" class="courseworks section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Курсовые работы</h2>
+                <p class="section-subtitle">Проекты по различным дисциплинам</p>
+            </div>
+            <div id="courseworksList" class="works-grid">
+                <!-- Динамически загружается из JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Works Section -->
+    <section id="practicals" class="practicals section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Практические работы</h2>
+                <p class="section-subtitle">Лабораторные и практические задания</p>
+            </div>
+            <div id="practicalsList" class="works-grid">
+                <!-- Динамически загружается из JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-subtitle">Свяжитесь со мной</p>
+            </div>
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:evgeniy.shulga@example.com">evgeniy.shulga@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/NSODAT" target="_blank">github.com/NSODAT</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <a href="https://t.me/username" target="_blank">@username</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Шульга Евгений. Все права защищены.</p>
+            <p>09.03.01 Информатика и вычислительная техника</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
