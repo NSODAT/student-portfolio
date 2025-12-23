@@ -200,7 +200,7 @@ class PortfolioManager:
                 subprocess.run(["git", "init"], capture_output=True)
                 
                 # Добавляем remote origin
-                remote_url = "https://github.com/NSODAT/student-portfolio.git"
+                remote_url = "https://github.com/NSODAT/developer-portfolio.git"
                 subprocess.run(["git", "remote", "add", "origin", remote_url], capture_output=True)
                 
                 # Создаем ветку main
